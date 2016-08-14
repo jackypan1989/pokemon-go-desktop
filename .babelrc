@@ -1,0 +1,25 @@
+{
+  "presets": ["es2015", "stage-0", "react"],
+  "plugins": [
+    "transform-runtime",
+    ["antd", [{ "libraryName": "antd", "style": "css" }]],
+    "add-module-exports"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "babel-plugin-transform-remove-console",
+        "babel-plugin-transform-remove-debugger",
+        "babel-plugin-dev-expression"
+      ]
+    },
+    "development": {
+      "presets": ["react-hmre"]
+    },
+    "test": {
+      "plugins": [
+        ["webpack-loaders", { "config": "webpack.config.node.js", "verbose": false }]
+      ]
+    }
+  }
+}
