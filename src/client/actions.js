@@ -1,6 +1,6 @@
 import store from '../store'
 
-let socket = require('socket.io-client')('http://localhost:3000')
+let socket = io('http://localhost:3000')
 
 socket.on('store-update', data => {
   store.set(data)

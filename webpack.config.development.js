@@ -34,7 +34,8 @@ export default merge(baseConfig, {
           'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
         ]
       }
-    ]
+    ],
+    noParse: ['ws']
   },
 
   plugins: [
