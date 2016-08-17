@@ -24,6 +24,14 @@ const columns = [{
   title: 'Name',
   dataIndex: 'name',
   key: 'name'
+},
+{
+  title: '#',
+  dataIndex: 'pokemon_id',
+  key: 'pokemon_id',
+  sorter: (a, b) => {
+    return a.pokemon_id - b.pokemon_id
+  }
 }, {
   title: 'CP-Tier',
   dataIndex: 'cp_tier',
